@@ -1,0 +1,12 @@
+Changes
+MANIFEST
+Makefile.PL
+README
+lib/Bleach.pm
+lib/Morse.pm
+t/bleach.t
+t/morse.t
+demo_bleach.pl
+demo_morse.pl
+demo_empty.pl
+empty
