@@ -4,9 +4,16 @@ Makefile.PL
 README
 lib/Bleach.pm
 lib/Morse.pm
+lib/DWIM.pm
 t/bleach.t
 t/morse.t
+t/DWIM.t
+demo_bleach.c
+demo_bleach.eng
+demo_bleach.lisp
 demo_bleach.pl
+demo_bleach.sh
 demo_morse.pl
 demo_empty.pl
+demo_DWIM.pl
 empty

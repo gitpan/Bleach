@@ -1,5 +1,12 @@
-Revision history for Perl extensions Bleach and Morse
+Revision history for Perl extensions Bleach, Morse, and DWIM
 
 1.00	Thu Feb 22 11:35:12 2001
 
 	- original version
+
+
+1.10	Mon May  7 08:12:59 2001
+
+	- Add demo_bleach.* examples in other languages
+
+	- Added DWIM.pm (at dha's implicit request)

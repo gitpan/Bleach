@@ -1,5 +1,5 @@
 ==============================================================================
-                      Release of version 1.00 of Bleach
+                      Release of version 1.10 of Bleach
 ==============================================================================
 
 
@@ -37,10 +37,12 @@ COPYRIGHT
 
 ==============================================================================
 
-CHANGES IN VERSION 1.00
+CHANGES IN VERSION 1.10
 
 
-	- original version
+	- Add demo_bleach.* examples in other languages
+
+	- Added DWIM.pm (at dha's implicit request)
 
 
 ==============================================================================

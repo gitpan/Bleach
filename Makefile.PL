@@ -2,6 +2,6 @@
 use ExtUtils::MakeMaker;
 WriteMakefile(
 		NAME	=> 'Bleach',
-		VERSION => '1.00',
+		VERSION => '1.10',
 
 	     );
