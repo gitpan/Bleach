@@ -10,3 +10,8 @@ Revision history for Perl extensions Bleach, Morse, and DWIM
 	- Add demo_bleach.* examples in other languages
 
 	- Added DWIM.pm (at dha's implicit request)
+
+
+1.11	Mon May  7 10:21:36 2001
+
+	- Changed the DWIM operator to ... (thanks Dave!)

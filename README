@@ -1,5 +1,5 @@
 ==============================================================================
-                      Release of version 1.10 of Bleach
+                      Release of version 1.11 of Bleach
 ==============================================================================
 
 
@@ -37,12 +37,10 @@ COPYRIGHT
 
 ==============================================================================
 
-CHANGES IN VERSION 1.10
+CHANGES IN VERSION 1.11
 
 
-	- Add demo_bleach.* examples in other languages
-
-	- Added DWIM.pm (at dha's implicit request)
+	- Changed the DWIM operator to ... (thanks Dave!)
 
 
 ==============================================================================

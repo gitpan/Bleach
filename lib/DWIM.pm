@@ -1,6 +1,7 @@
 package DWIM;
 $VERSION = '1.05';
 my $dwimity = " \t"x4;
+my $dwimop = '...';
 my $string = qr< (?:["][^"\\]*(?:\\.[^"\\]*)*["]
 	          | ['][^'\\]*(?:\\.[^'\\]*)*[']
 		 )
@@ -11,11 +12,11 @@ sub dwim {
 	my $table;
 	my $odd=0;
 	use Data::Dumper 'Dumper';
-	my @bits = split qr<($string|[\$\@%]\w+|(?!x)[])}[({\w\s;/]+)>;
+	my @bits = split qr<(?!\s*\bx)($string|[\$\@%]\w+|[])}[({\w\s;/]+)>;
 	for ($b=0;$b<@bits;$b+=2) {
 		next unless $bits[$b];
 		$table .= $bits[$b]."\n";
-		$bits[$b] = '.';
+		$bits[$b] = $dwimop;
 	}
 	$_ = join "", @bits;
 	$table = unpack "b*", $table;
@@ -29,7 +30,7 @@ sub undwim {
 	$table =~ s/[~\n]//g;
 	$table =~ tr/ \t/01/;
 	my @table = split /\n/, pack "b*", $table;
-	s/([.])/shift @table/ge;
+	s/\Q$dwimop/shift @table/ge;
 	$_
 }
 
@@ -60,15 +61,15 @@ DWIM - Perl's confusing operators made easy
 
 The first time you run a program under C<use DWIM>, the module
 replaces all the unsightly operators et al. from your source file
-with a single operator: .
+with the new DWIM operator: C<...> (pronounced "yadda yadda yadda").
 
 The code continues to work exactly as it did before, but now it
 looks like this:
 
 	use DWIM;
 	
-	my ($x) . .("Hullo " . 3 . "world" . "~" . 30) . /(.)/;
-	$x . tr/tnv/uow/;
+	my ($x) ... ...("Hullo " ... 3 ... "world" ... "~" ... 30) ... /(...)/;
+	$x ... tr/tnv/uow/;
 	print $x;
 
 =head1 DIAGNOSTICS
